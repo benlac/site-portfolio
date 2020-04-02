@@ -1,0 +1,76 @@
+@font-face {
+    font-family: "Neue Haas Display Black";
+    src: url("assets/fonts/NeueHaasDisplay-Black.ttf");
+  }
+  @font-face {
+    font-family: "Pistilli Roman";
+    src: url("assets/fonts/Pistilli-Roman.otf");
+  }
+*{
+    font-family: 'Neue Haas Display Black', sans-serif;
+}
+img{
+    max-width: 100%;
+}
+/**HEADER**/
+
+header{
+    height: 6rem;
+    background: rgb(239,221,230);
+    background: linear-gradient(173deg, rgba(239,221,230,1) 0%, rgba(178,196,227,1) 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.header__nav{
+    color: #FFF;
+}
+.header__nav a{
+    margin-right: 5rem;
+    transition: all .5s;
+}
+.header__nav a:hover{
+    border-bottom: 1px solid #FFF;
+}
+.header__logo{
+    margin-left: 2rem;
+    font-family: 'Pistilli Roman';
+    font-size: 2.5em;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+/** HOME **/
+.home{
+    display: flex;
+    height: 100vh;
+}
+.home__section-1{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5em;
+}
+.home__section-2{
+    width: 50%;
+}.home__section-2 img{
+    width: 100%;
+}
+.home__section-3{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+/** FOOTER **/
+
+footer{
+    margin-top: 6rem;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    background-color: #12296d;
+    color: #FFF;
+}

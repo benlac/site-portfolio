@@ -2,11 +2,31 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>Lacombled Benoit | {% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        <header>
+            <h1 class="header__logo">BL</h1>
+            <nav class="header__nav">
+                <a href="{{ path('main_home') }}">acceuil</a>
+                <a href="{{ path('main_skill') }}">compétences</a>
+                <a href="{{ path('main_portfolio') }}">réalisations</a>
+                <a href="{{ path('main_contact') }}">contactez-moi</a>
+            </nav>
+        </header>
+        <div class="container">
+            {% block body %}{% endblock %}
+            {% block javascripts %}{% endblock %}
+        </div>
+        <footer>
+            <nav>
+                <a href="">0669584619</a>
+                <a href="{{ path('main_contact') }}">benoit.lacombled@gmail.com</a>
+                <a href="">@benoitlacombled</a>
+            </nav>
+        </footer>
     </body>
 </html>
