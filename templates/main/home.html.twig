@@ -5,17 +5,17 @@
 {% block body %}
 <main class="home">
     <section class="home__section-1">
-        <p>Bienvenue, je suis Benoit Lacombled. Développeur web back-end.</p>
+        <p class="home__section-1__p">Bienvenue, je suis<br><span>Benoit Lacombled.</span><br>Développeur web<span><br>back-end.</span></p>
     </section>
     <section class="home__section-2">
         <img src=" {{ asset('assets/images/home.png') }} " alt="Illustration d'un développeur expliquant son travail à un collègue">
     </section>
 </main>
 <section class="home__section-3">
-    <h2>Vous recherchez un développeur ?</h2>
-    <h3>Vous l'avez trouvé.</h3>
-    <p>Mon profil est atypique, je suis un ancien pompier de Paris reconverti en développeur back-end, je vis aujourd’hui de ma passion de l’informatique et du web. Autodidacte dans la vie, j’ai tout de même suivi une formation avec des professeurs aussi talentueux qu’exigent afin d’accélérer le processus de reconversion.
+    <h2 class="home__section-3__h2">Vous recherchez un développeur ?</h2>
+    <h3 class="home__section-3__h3">Vous l'avez trouvé.</h3>
+    <p class="home__section-3__p">Mon profil est atypique, je suis un ancien pompier de Paris reconverti en développeur back-end, je vis aujourd’hui de ma passion de l’informatique et du web. Autodidacte dans la vie, j’ai tout de même suivi une formation avec des professeurs aussi talentueux qu’exigent afin d’accélérer le processus de reconversion.
     Toujours à la pointe de la technologie, j’aime découvrir des nouveautés afin d’être le plus performant possible.</p>
-    <button>Contactez-moi</button>
+    <a href="{{ path('main_contact') }}" class="btn-contact">Contactez-moi</a>
 </section>
 {% endblock %}

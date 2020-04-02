@@ -1,13 +1,21 @@
 @font-face {
-    font-family: "Neue Haas Display Black";
-    src: url("assets/fonts/NeueHaasDisplay-Black.ttf");
+    font-family: "NeueHaasDisplay-Roman";
+    src: url("assets/fonts/NeueHaasDisplay-Roman.ttf");
+  }
+@font-face {
+    font-family: "NeueHaasDisplay-Medium";
+    src: url("assets/fonts/NeueHaasDisplay-Mediu.ttf");
+  }
+@font-face {
+    font-family: "NeueHaasDisplay-Light";
+    src: url("assets/fonts/NeueHaasDisplay-Light.ttf");
   }
   @font-face {
     font-family: "Pistilli Roman";
     src: url("assets/fonts/Pistilli-Roman.otf");
   }
 *{
-    font-family: 'Neue Haas Display Black', sans-serif;
+    font-family: 'NeueHaasDisplay-Light', sans-serif;
 }
 img{
     max-width: 100%;
@@ -21,14 +29,15 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 .header__nav{
     color: #FFF;
+    font-family: 'NeueHaasDisplay-Medium', sans-serif;
 }
 .header__nav a{
     margin-right: 5rem;
     transition: all .5s;
+    font-family: 'NeueHaasDisplay-Medium', sans-serif;
 }
 .header__nav a:hover{
     border-bottom: 1px solid #FFF;
@@ -42,10 +51,11 @@ header{
     width: 80%;
     margin: 0 auto;
 }
+
 /** HOME **/
 .home{
     display: flex;
-    height: 100vh;
+    margin-top: 3rem;
 }
 .home__section-1{
     width: 50%;
@@ -53,6 +63,13 @@ header{
     justify-content: center;
     align-items: center;
     font-size: 3.5em;
+}
+.home__section-1__p{
+    font-family: 'NeueHaasDisplay-Roman', sans-serif;
+    font-weight: 100;
+}
+.home__section-1__p span{
+    font-family: 'NeueHaasDisplay-Medium', sans-serif;
 }
 .home__section-2{
     width: 50%;
@@ -64,13 +81,94 @@ header{
     margin: 0 auto;
     text-align: center;
 }
+.home__section-3__h2{
+    font-family: 'NeueHaasDisplay-Roman', sans-serif;
+    font-size: 2.5em;
+    font-weight: 100;
+}
+.home__section-3__h3{
+    font-family: 'NeueHaasDisplay-Medium', sans-serif;
+    font-size: 2em;
+    margin-top: 1.1rem;
+}
+.home__section-3__p{
+    font-family: 'NeueHaasDisplay-Roman', sans-serif;
+    line-height: 1.5em;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.2em;
+}
+
+/** SKILL **/
+.skill{
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+}
+.skill__h2{
+    font-family: 'NeueHaasDisplay-Roman', sans-serif;
+    font-size: 2.5em;
+    margin-top: 2rem;
+}
+.skill__p{
+    font-family: 'NeueHaasDisplay-Roman', sans-serif;
+    line-height: 1.5em;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    font-size: 1.2em;
+}
+/** PORTFOLIO **/
+.portfolio{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.card{
+    width: 20%;
+    margin-top: 4rem;
+    border-radius: 25px;
+    box-shadow: 6px 3px 30px 0px rgba(0,0,0,0.75);
+}
+.card__body{
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.3rem;
+}
+.card__img{
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
 /** FOOTER **/
 
 footer{
     margin-top: 6rem;
     width: 100%;
-    height: 3rem;
-    display: flex;
+    height: 4rem;
     background-color: #12296d;
     color: #FFF;
 }
+
+.footer__nav{
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+}
+
+.btn-contact{
+    background: rgb(243,90,138);
+    background: linear-gradient(262deg, rgba(243,90,138,1) 0%, rgba(246,105,142,1) 34%, rgba(246,118,145,1) 55%, rgba(249,146,154,1) 80%, rgba(250,165,158,1) 100%);
+    color: #FFF;
+    border: none;
+    box-shadow: 1px 3px 7px -2px black;
+    border-radius:28px;
+    padding:15px 56px;
+    font-size: 1.3em;
+}
+
+.btn-contact--cv{
+    border-radius: 4px;
+}
+
+
