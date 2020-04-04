@@ -17,8 +17,19 @@
 *{
     font-family: 'NeueHaasDisplay-Light', sans-serif;
 }
+/** GENERAL **/
 img{
     max-width: 100%;
+}
+.btn-contact{
+    background: rgb(243,90,138);
+    background: linear-gradient(262deg, rgba(243,90,138,1) 0%, rgba(246,105,142,1) 34%, rgba(246,118,145,1) 55%, rgba(249,146,154,1) 80%, rgba(250,165,158,1) 100%);
+    color: #FFF;
+    border: none;
+    box-shadow: 1px 3px 7px -2px black;
+    border-radius:28px;
+    padding:15px 56px;
+    font-size: 1.3em;
 }
 /**HEADER**/
 
@@ -147,6 +158,10 @@ header{
     display: flex;
     margin-top: 3rem;
 }
+.contact__h2{
+    font-size: 1em;
+    font-weight: 100;
+}
 .contact__form{
     width: 50%;
     justify-content: center;
@@ -161,8 +176,34 @@ header{
 .contact__illu img{
     width: 100%;
 }
-
-
+.contact__form form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.contact__form input, textarea{
+    border: none;
+    border-bottom: 1px solid black ;
+    width: 100%;
+    transition: all .5s ease;
+    font-size: .5em;
+    margin-top: 1.5rem;
+}
+.contact__form input:focus, textarea:focus{
+    opacity: .5;
+    border-bottom: solid 1px rgba(0,0,0,0.5);
+    outline: none;
+    transition: all .2s ease;
+}
+textarea{
+    height: 29px;
+}
+.btn-contact--form{
+    font-size: .5em;
+    padding: .3em 3em;
+    margin-top: 3rem;
+    align-self: flex-end;
+}
 /** FOOTER **/
 
 footer{
@@ -178,17 +219,6 @@ footer{
     justify-content: space-around;
     height: 100%;
     align-items: center;
-}
-
-.btn-contact{
-    background: rgb(243,90,138);
-    background: linear-gradient(262deg, rgba(243,90,138,1) 0%, rgba(246,105,142,1) 34%, rgba(246,118,145,1) 55%, rgba(249,146,154,1) 80%, rgba(250,165,158,1) 100%);
-    color: #FFF;
-    border: none;
-    box-shadow: 1px 3px 7px -2px black;
-    border-radius:28px;
-    padding:15px 56px;
-    font-size: 1.3em;
 }
 
 .btn-contact--cv{
