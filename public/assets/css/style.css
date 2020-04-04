@@ -45,7 +45,8 @@ header{
 .header__logo{
     margin-left: 2rem;
     font-family: 'Pistilli Roman';
-    font-size: 2.5em;
+    font-size: 4em;
+    letter-spacing: -6px;
 }
 .container{
     width: 80%;
@@ -97,6 +98,7 @@ header{
     margin-top: 2rem;
     margin-bottom: 2rem;
     font-size: 1.2em;
+    text-align: justify;
 }
 
 /** SKILL **/
@@ -138,6 +140,28 @@ header{
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
 }
+
+/** CONTACT **/
+
+.contact{
+    display: flex;
+    margin-top: 3rem;
+}
+.contact__form{
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    display: flex;
+    flex-direction: column;
+}
+.contact__illu{
+    width: 50%;
+}
+.contact__illu img{
+    width: 100%;
+}
+
 
 /** FOOTER **/
 
