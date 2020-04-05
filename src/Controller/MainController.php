@@ -40,7 +40,8 @@ class MainController extends AbstractController
         $form = $this->createForm(ContactType::class, $contact);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
-            $this->addFlash('succes', 'Votre email a bien été transmis');
+            $this->addFlash('success', 'Votre email a bien été transmis');
+            return $this->redirectToRoute('main_contact');
         }
         return $this->render('main/contact.html.twig', [
             'form' => $form->createView(),

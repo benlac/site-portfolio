@@ -5,15 +5,30 @@
 {% block body %}
 <div class="contact">
     <div class="contact__form">
-        {{ form_start(form) }}
         <h2 class="contact__h2">Contactez-moi</h2>
-            {{ form_row(form.lastname) }}
-            {{ form_row(form.firstname) }}
-            {{ form_row(form.company) }}
-            {{ form_row(form.email) }}
-            {{ form_row(form.message) }}
-            <button class="btn-contact btn-contact--form">Envoyer</button>
-            {{ form_end(form) }}
+        {{ form_start(form) }}
+        <div class="contact__error">
+            {{ form_errors(form.lastname) }}
+        </div>
+        {{ form_widget(form.lastname) }}
+        <div class="contact__error">
+            {{ form_errors(form.firstname) }}
+        </div>
+        {{ form_widget(form.firstname) }}
+        <div class="contact__error">
+            {{ form_errors(form.company) }}
+        </div>
+        {{ form_widget(form.company) }}
+        <div class="contact__error">
+            {{ form_errors(form.email) }}
+        </div>
+        {{ form_widget(form.email) }}
+        <div class="contact__error">
+            {{ form_errors(form.message) }}
+        </div>
+        {{ form_widget(form.message) }}
+        <button class="btn-contact btn-contact--form">Envoyer</button>
+        {{ form_end(form) }}
     </div>
     <div class="contact__illu">
         <img src="{{ asset('assets/images/contact.png') }}" alt="">

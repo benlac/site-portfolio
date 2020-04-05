@@ -46,6 +46,7 @@ header{
     font-family: 'NeueHaasDisplay-Medium', sans-serif;
 }
 .header__nav a{
+    font-size: 1.2em;
     margin-right: 5rem;
     transition: all .5s;
     font-family: 'NeueHaasDisplay-Medium', sans-serif;
@@ -62,6 +63,9 @@ header{
 .container{
     width: 80%;
     margin: 0 auto;
+    min-height:100vh;
+	display:flex;
+	flex-direction:column;
 }
 
 /** HOME **/
@@ -77,11 +81,11 @@ header{
     font-size: 3.5em;
 }
 .home__section-1__p{
-    font-family: 'NeueHaasDisplay-Roman', sans-serif;
+    font-family: 'NeueHaasDisplay-Medium', sans-serif;
     font-weight: 100;
 }
 .home__section-1__p span{
-    font-family: 'NeueHaasDisplay-Medium', sans-serif;
+    font-family: 'NeueHaasDisplay-Roman', sans-serif;
 }
 .home__section-2{
     width: 50%;
@@ -114,7 +118,7 @@ header{
 
 /** SKILL **/
 .skill{
-    margin: 0 auto;
+    margin: 5rem auto;
     text-align: center;
     width: 50%;
 }
@@ -130,6 +134,23 @@ header{
     margin-bottom: 4rem;
     font-size: 1.2em;
 }
+.skill__item{
+    margin-top: 8rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+.skill__item span{
+    background-color: #d6e2ff;
+    padding: 3rem;
+    color: #FFF;
+}
+.skill__item span:nth-child(odd){
+    border-radius: 65% 35% 38% 62% / 54% 30% 70% 46%; 
+}
+.skill__item span:nth-child(even){
+    border-radius: 36% 64% 75% 25% / 54% 53% 47% 46%; 
+}
 /** PORTFOLIO **/
 .portfolio{
     display: flex;
@@ -140,7 +161,7 @@ header{
     width: 20%;
     margin-top: 4rem;
     border-radius: 25px;
-    box-shadow: 6px 3px 30px 0px rgba(0,0,0,0.75);
+    box-shadow: 6px 3px 30px -14px rgba(0,0,0,0.75);
 }
 .card__body{
     text-align: center;
@@ -161,6 +182,7 @@ header{
 .contact__h2{
     font-size: 1em;
     font-weight: 100;
+    margin-bottom: 2.5rem;
 }
 .contact__form{
     width: 50%;
@@ -187,7 +209,7 @@ header{
     width: 100%;
     transition: all .5s ease;
     font-size: .5em;
-    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
 }
 .contact__form input:focus, textarea:focus{
     opacity: .5;
@@ -203,6 +225,10 @@ textarea{
     padding: .3em 3em;
     margin-top: 3rem;
     align-self: flex-end;
+}
+.contact__error{
+    font-size: .5em;
+    color: rgba(243,90,138,1);
 }
 /** FOOTER **/
 
