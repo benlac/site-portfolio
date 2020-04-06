@@ -4,9 +4,11 @@ namespace App\Controller;
 
 use App\Entity\Contact;
 use App\Form\ContactType;
-use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\ResponseHeaderBag;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class MainController extends AbstractController
 {
@@ -46,5 +48,14 @@ class MainController extends AbstractController
         return $this->render('main/contact.html.twig', [
             'form' => $form->createView(),
         ]);
+    }
+    /**
+     * @Route("/download", name="main_download")
+     */
+    public function download()
+    {
+        $file = new File('assets/files/benoitLacombled-cv.pdf');
+
+        return $this->file($file, 'cv-benoitLacombled.pdf', ResponseHeaderBag::DISPOSITION_ATTACHMENT);
     }
 }
