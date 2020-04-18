@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Contact;
 use App\Form\ContactType;
+use App\Notification\ContactNotification;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\Routing\Annotation\Route;
@@ -36,12 +37,13 @@ class MainController extends AbstractController
     /**
      * @Route("/contact", name="main_contact")
      */
-    public function contact(Request $request)
+    public function contact(Request $request, ContactNotification $notification)
     {
         $contact = new Contact();
         $form = $this->createForm(ContactType::class, $contact);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
+            $notification->notify($contact);
             $this->addFlash('success', 'Votre email a bien été transmis');
             return $this->redirectToRoute('main_contact');
         }
