@@ -28,7 +28,7 @@
         <header>
             <h1 class="header__logo">BL</h1>
             <nav class="header__nav">
-                <a href="{{ path('main_home') }}">acceuil</a>
+                <a href="{{ path('main_home') }}">accueil</a>
                 <a href="{{ path('main_skill') }}">compétences</a>
                 <a href="{{ path('main_portfolio') }}">réalisations</a>
                 <a href="{{ path('main_contact') }}">contactez-moi</a>
@@ -40,9 +40,13 @@
         </div>
         <footer>
             <nav class="footer__nav">
-                <a href="">0669584619</a>
+                <a href="tel:+33669584619">0669584619</a>
                 <a href="mailto:benoit.lacombled@gmail.com">benoit.lacombled@gmail.com</a>
-                <a href="">@benoitlacombled</a>
+                <div class="footer__social">
+                <a href="https://github.com/benlac" target="_blank"><img src="{{ asset('assets/social/github.svg') }}" alt=""></a> 
+                <a href="https://www.linkedin.com/in/benoitlacombled/" target="_blank"><img src="{{ asset('assets/social/linkedin.svg') }}" alt=""></a> 
+                <a href="https://twitter.com/LacombledBenoit" target="_blank"><img src="{{ asset('assets/social/twitter.svg') }}" alt=""></a> 
+                </div>
             </nav>
         </footer>
     </body>
